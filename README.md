@@ -1,100 +1,125 @@
-# CareerOS
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/banner-dark.png">
+  <img alt="CareerOS. Your work, on the record. An evidence-first career record: it drafts only what your work can prove, and publishes only what you approve." src="media/banner-light.png">
+</picture>
 
-**Your work, on the record.** CareerOS is an evidence-first career record. It notices when you ship
-(a GitHub release, a merged pull request), drafts your résumé line, site news, README line and LinkedIn
-text **only from claims it can back with evidence**, and publishes nothing until you approve it.
+<br>
 
-> This repository is the public showcase: screenshots, the design and the honest status. The source code
-> lives in a private repository.
+CareerOS notices when you ship. It drafts your résumé line, site news, GitHub README line and
+LinkedIn caption **only from facts it can show**, keeps every line beside its proof, and
+publishes nothing until you approve it.
 
-![The review screen: drafts on the left, the proof behind them on the right](screenshots/review-detail.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/hero-dark.png">
+  <img alt="The review screen on a laptop and a phone: drafts for each place on the left, the claims and evidence behind them on the right, and a bar to approve, snooze or dismiss." src="media/hero-light.png">
+</picture>
 
-## Status (October 2026)
+> Every image here is a screenshot of the real app, signed in to a demo account with fictional
+> people and work. The images follow your GitHub theme, the way the app follows your system.
 
-| | |
-|---|---|
-| Web app | Built and working **locally** (Next.js 16, PostgreSQL). **Not deployed**: there is no public instance yet. |
-| Tests | 431 automated tests pass (unit and integration against a real PostgreSQL database), plus an evaluation suite for the publishing gates. |
-| Mobile app (Flutter) | **Not built yet.** The app API, design tokens and screen spec are ready for it. |
-| GitHub integration | Implemented and tested with signed webhook fixtures; the GitHub App itself is not registered yet. |
-| AI drafting | Works with a provider key; without one, it falls back to templates. Either way, every draft passes the same code-based gates. |
-| Name | "CareerOS" is a working name. |
+### It notices, and says why
 
-Everything in the screenshots is the real app running against a seeded demo account ("Ada Example"); the
-people, repositories and work in it are fictional.
+A release or a merged pull request arrives and lands in your queue with the reason it is there.
+The top three are *Start here*: what matters most, while the details are fresh, and quickest to
+decide. No scores, no streaks.
 
-## What it does
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/notices-dark.png">
+  <img alt="Start here: two releases, each with the reason it is first, how long it takes to decide, and the places a draft is ready for." src="media/notices-light.png">
+</picture>
 
-- **Vault.** Your profile, projects, experience, education, achievements, skills, certifications and
-  evidence in one place, every change versioned.
-- **Sources.** GitHub releases and merged pull requests arrive in Activity, each with a plain reason why
-  it was or was not suggested. Nothing publishes because a webhook arrived.
-- **Review.** Each suggestion shows what happened, the claims behind it (verified, needs your
-  confirmation, out of date), the evidence, and a draft per channel. You confirm claims, edit wording,
-  choose channels and approve. Unconfirmed claims cannot be published.
-- **Gates, in code, not prompts.** Numbers, attribution, citations, privacy, links, length and style are
-  checked before anything can be approved. The AI may never invent a metric, a role or an outcome.
-- **Publishing.** Your public profile and news feed (JSON, JSON Feed, RSS) for your own website through a
-  public API and SDK, a managed block in your GitHub profile README, and LinkedIn text you copy and post
-  yourself (LinkedIn offers no API for this, and CareerOS never scrapes it). Deleting a record retracts
-  what it published.
-- **Recommendations you can see the reasons for.** The queue is ranked by significance, freshness, effort
-  and momentum, with the top three as "Start here", each with its reasons. Scores are never shown. Your
-  past decisions tune it.
-- **For developers.** Scoped API keys, signed outbound webhooks and an OpenAPI reference.
+### Every line keeps its receipts
 
-## Screens
+Each draft cites the facts it rests on. Seven checks in code (numbers, attribution, citations,
+privacy, links, length, style) run before you see it, and anything the AI inferred stays marked
+until you confirm it. An evaluation suite of real and adversarial cases runs on every change.
 
-| | |
-|---|---|
-| ![Landing page](screenshots/landing.png) | ![Desk](screenshots/desk.png) |
-| **Landing.** One promise, one example with its proof; the seal stamps "Approved by you". | **Desk.** What to do next, ranked, with the reason for each. |
-| ![Review queue](screenshots/review-queue.png) | ![Activity](screenshots/activity.png) |
-| **Review queue.** Rank, one plain reason, effort, and which channels have drafts. | **Activity.** Everything GitHub reported, and why it was or was not suggested. |
-| ![Channels](screenshots/channels.png) | ![Public profile channel](screenshots/channels-site.png) |
-| **Channels.** Every destination with where it stands; opens on what needs you. | **Your site.** What visitors would see, and the exact data your site receives. |
-| ![Vault](screenshots/vault.png) | ![History](screenshots/history.png) |
-| **Vault.** Your record by kind; each item knows what still needs you. | **History.** Every edit, decision, publication and permission. |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/receipts-dark.png">
+  <img alt="A résumé line draft with its Include switch and passed checks, beside the claims that support it: one verified from GitHub, others waiting for confirmation." src="media/receipts-light.png">
+</picture>
 
-### Dark mode
+### Ready for LinkedIn, posted by you
 
-| | |
-|---|---|
-| ![Review in dark mode](screenshots/review-detail-dark.png) | ![Desk in dark mode](screenshots/desk-dark.png) |
+LinkedIn doesn't let apps post for you, and CareerOS never scrapes it. Approve LinkedIn text and
+you get the caption plus a card image made only from the facts that post cites: copy, save,
+post, mark it posted.
 
-### Phone
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/linkedin-dark.png">
+  <img alt="The LinkedIn hand-off: the caption, four numbered steps, and a generated card showing the achievement, its project and the facts behind it." src="media/linkedin-light.png">
+</picture>
 
-| | | | |
-|---|---|---|---|
-| ![Desk on a phone](screenshots/phone-desk-light.png) | ![Review on a phone](screenshots/phone-review-light.png) | ![Desk on a phone, dark](screenshots/phone-desk-dark.png) | ![Review on a phone, dark](screenshots/phone-review-dark.png) |
+### One record, every place it goes
 
-## Design
+Your website reads your approved news, projects and profile through a public API, feeds and a
+web component, so a portfolio keeps itself up to date. Your GitHub profile README gets a short
+block between two markers. Résumés export as PDF, Word and JSON Resume. Each place says whether
+it updates by itself or waits for you.
 
-- **Idea:** a record with receipts. Every published line sits beside the proof it rests on.
-- **Logo:** a seal, the stamp you press when you approve, with the app's proof mark at its centre, and
-  lowercase lettering drawn on the same round grid.
-- **Type:** Fraunces with soft corners for headings, Instrument Sans for the interface, Newsreader for
-  the words you will publish.
-- **Icons:** Hugeicons Stroke Rounded, the same set planned for the mobile app.
-- **Shape and motion:** soft radii (12 for controls, 20 for cards, 24 for sheets); the seal's stamp and
-  the proof mark's press are the only signature motions; reduced motion is respected.
-- **Status in words, not dots:** "Needs you", "Watching", "In review".
-- **Accessibility:** keyboard-first, visible focus, 44 px targets, contrast checked by tests in both
-  themes.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/channels-dark.png">
+  <img alt="Channels: an index of GitHub, the public profile, the README, LinkedIn and site rebuilds, beside the public profile with exactly what a visitor's site receives." src="media/channels-light.png">
+</picture>
+
+### Made for the phone as well
+
+Each screen changes shape on a small display instead of shrinking: one column, the decision in
+reach above the tab bar, the detail one tap away.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/phones-dark.png">
+  <img alt="Three phones: the Desk with what to start on, a review with its approve bar, and Channels with the LinkedIn hand-off." src="media/phones-light.png">
+</picture>
 
 ## How it is built
 
-| Layer | Choice |
+| | |
 |---|---|
-| Web | Next.js 16 (App Router), React 19, server actions; no client secrets |
-| Data | PostgreSQL 17, Drizzle ORM, versioned records and an append-only history |
-| Auth | Better Auth (email and password, GitHub), bearer tokens for the mobile app |
+| Web | Next.js 16 (App Router) and React 19, server actions, a strict nonce-based Content Security Policy |
+| Data | PostgreSQL 17 with Drizzle; every record versioned, every change in an append-only history |
 | Jobs | A Postgres-backed worker with leases, retries and dead letters |
-| AI | Provider-agnostic drafting behind deterministic gates, with an evaluation suite |
-| Public API | Read-only, published items only, with a TypeScript SDK and a web component |
-| Tests | Vitest (unit and integration against a real database) |
+| AI | Any provider or none (templates). Publishing rules are code, never prompts, with an evaluation suite in CI |
+| Public API | Read-only and approved items only; JSON, JSON Feed, RSS, a TypeScript SDK and a web component |
+| Quality | Unit and integration tests on a real database, Playwright journeys with axe accessibility checks, a Docker compose smoke test, all in CI |
+| Design | Fraunces, Instrument Sans and Newsreader; Hugeicons; a seal for a logo; light and deep dark themes from one set of tokens |
+
+## Status
+
+| | |
+|---|---|
+| Web app | Built and running locally. **Not deployed**: there is no public instance yet. |
+| Mobile app | Not built yet; the app API, tokens and screen spec are ready for it. |
+| GitHub | Integration built and tested with signed webhook fixtures; the GitHub App itself is not registered yet. |
+| Name | "CareerOS" is a working name. |
+
+The source code is private.
+
+<details>
+<summary><strong>Every screen, light and dark</strong></summary>
+
+<br>
+
+| Light | Dark |
+|---|---|
+| ![Landing page](screenshots/landing.png) | ![Landing page, dark](screenshots/landing-dark.png) |
+| ![Desk](screenshots/desk.png) | ![Desk, dark](screenshots/desk-dark.png) |
+| ![Review queue](screenshots/review-queue.png) | ![Review queue, dark](screenshots/review-queue-dark.png) |
+| ![Review](screenshots/review-detail.png) | ![Review, dark](screenshots/review-detail-dark.png) |
+| ![Activity](screenshots/activity.png) | ![Activity, dark](screenshots/activity-dark.png) |
+| ![Vault](screenshots/vault.png) | ![Vault, dark](screenshots/vault-dark.png) |
+| ![Channels](screenshots/channels.png) | ![Channels, dark](screenshots/channels-dark.png) |
+| ![Public profile channel](screenshots/channels-site.png) | ![Public profile channel, dark](screenshots/channels-site-dark.png) |
+| ![History](screenshots/history.png) | ![History, dark](screenshots/history-dark.png) |
+
+| Phone | | |
+|---|---|---|
+| ![Desk on a phone](screenshots/phone-desk-light.png) | ![Review on a phone](screenshots/phone-review-light.png) | ![Channels on a phone](screenshots/phone-channels-light.png) |
+| ![Desk on a phone, dark](screenshots/phone-desk-dark.png) | ![Review on a phone, dark](screenshots/phone-review-dark.png) | ![Channels on a phone, dark](screenshots/phone-channels-dark.png) |
+
+</details>
 
 ## Licence
 
-The contents of this showcase repository (this README and the screenshots) are released under the MIT
-licence. The CareerOS source code is private and is not covered by it.
+This README and its images are released under the [MIT licence](LICENSE). The CareerOS source
+code is private and is not covered by it.
