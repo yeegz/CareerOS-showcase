@@ -88,7 +88,7 @@ reach above the tab bar, the detail one tap away.
 
 | | |
 |---|---|
-| Web app | Built and running locally. **Not deployed**: there is no public instance yet. |
+| Web app | Running as a private pilot on Google Cloud (Singapore). The address is not public yet: email delivery is still limited to the owner. |
 | Mobile app | Not built yet; the app API, tokens and screen spec are ready for it. |
 | GitHub | Integration built and tested with signed webhook fixtures; the GitHub App itself is not registered yet. |
 | Name | "CareerOS" is a working name. |
