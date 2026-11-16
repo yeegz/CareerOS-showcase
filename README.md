@@ -88,7 +88,7 @@ reach above the tab bar, the detail one tap away.
 
 | | |
 |---|---|
-| Web app | Running as a private pilot on Google Cloud (Singapore). The address is not public yet: email delivery is still limited to the owner. |
+| Web app | Offline. A private pilot ran on Google Cloud (Singapore) in October 2026 and has been taken down; the project is archived. |
 | Mobile app | Not built yet; the app API, tokens and screen spec are ready for it. |
 | GitHub | Integration built and tested with signed webhook fixtures; the GitHub App itself is not registered yet. |
 | Name | "CareerOS" is a working name. |
